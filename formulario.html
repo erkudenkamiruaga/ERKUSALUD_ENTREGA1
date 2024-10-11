@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        function validarFormulario(event) {
+           
+            event.preventDefault();
+           
+            const nombre = document.getElementById("nombre").value.trim();
+            const apellidos = document.getElementById("apellidos").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+           
+            if (nombre === "") {
+                alert("Por favor, completa el campo de nombre.");
+                return;
+            }
+            
+            if (apellidos === "") {
+                alert("Por favor, completa el campo de apellidos.");
+                return;
+            }
+            
+            if (email === "") {
+                alert("Por favor, completa el campo de email.");
+                return;
+            }
+            
+            if (password === "") {
+                alert("Por favor, completa el campo de contraseña.");
+                return;
+            }
+
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+
+<body class="formulario">
+    
+    <header>
+        <h1 style="color: #f39c12; font-family: 'Merriweather', sans-serif;">ERKU SALUD</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="autodisciplina.html">Autodisciplina</a></li>
+                <li><a href="bienestarpersonal.html">Bienestar personal</a></li>
+                <li><a href="estresyansiedad.html">Estrés y ansiedad</a></li>
+                <li><a href="habitosnegativos.html">Hábitos negativos</a></li>
+                <li><a href="formulario.html">Coger cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="logo-container">
+        <img src="img/logo.png" alt="Logo de ERKU SALUD" class="logo">
+    </div>
+
+    <h1>Sesiones a medida para ti</h1>
+    <p>
+       <strong>Rellena el siguiente formulario</strong> para ver qué tipo de sesión es más adecuada para tus necesidades.
+    </p>
+
+    <form id="formulario" onsubmit="validarFormulario(event)">
+        <fieldset>
+            <legend><strong>Tus datos básicos</strong></legend>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required placeholder="Introduce tu nombre">
+            
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" required placeholder="Introduce tus apellidos">
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="ejemplo@correo.com">
+            <br>
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" required minlength="6" maxlength="20"><br>
+
+            <label for="fecha_nac">Fecha de nacimiento</label>
+            <input type="date" name="fecha_nac" id="fecha_nac"><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><strong>Sesiones</strong></legend>
+           
+            <label>¿Qué tipo de sesión te gustaría?</label><br>
+            <input type="radio" name="tipo_sesion" id="tipo_sesion_individual" value="individual" checked>
+            <label for="tipo_sesion_individual">Individual</label>
+            <input type="radio" name="tipo_sesion" id="tipo_sesion_grupal" value="grupal">
+            <label for="tipo_sesion_grupal">Grupal</label><br><br>
+           
+            <label for="tema_sesion">Tema que te gustaría tratar</label> <br>
+            <select id="tema_sesion" name="tema_sesion">            
+                <option>Manejo del Estrés y la Ansiedad</option>
+                <option>Superación de Hábitos Negativos</option>
+                <option>Autodisciplina y Organización Personal</option>
+                <option>Autocuidado y Bienestar Personal</option>
+                <option selected>----</option>
+            </select><br><br>
+           
+            <label for="dia_sesion">¿Cuál es tu disponibilidad?</label><br>
+            <label for="dia_sesion">Día de la semana: </label>
+            <select id="dia_sesion" name="dia_sesion">            
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miércoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+                <option selected>----</option>
+            </select>
+
+            <label for="inicio_disponibilidad">de</label>
+            <input type="time" name="inicio_disponibilidad" id="inicio_disponibilidad">
+
+            <label for="fin_disponibilidad">a</label>
+            <input type="time" name="fin_disponibilidad" id="fin_disponibilidad"><br><br>
+       
+            <textarea name="textarea" rows="10" cols="50" placeholder="¿Algo que te gustaría compartir con nosotrxs?"></textarea><br><br>
+        </fieldset>
+
+        <input type="checkbox" name="condiciones" id="condiciones">
+        <label for="condiciones">Quiero recibir información de nuevas sesiones</label><br><br>
+
+        <button type="submit">ENVIAR</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Erkuden Camiruaga | Todos los derechos reservados</p>  
+        <p><a href="formulario.html">Coger cita</a> | <a href="privacy.html">Política de Privacidad</a></p>
+    </footer>
+</body>
+</html>
+
