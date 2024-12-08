@@ -44,7 +44,8 @@
 <body class="formulario">
     
     <header>
-        <h1 style="color: #f39c12; font-family: 'Merriweather', sans-serif;">ERKU SALUD</h1>
+        
+        <h1 class="ERKUSALUD">ERKU SALUD</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -66,13 +67,13 @@
        <strong>Rellena el siguiente formulario</strong> para ver qué tipo de sesión es más adecuada para tus necesidades.
     </p>
 
-    <form id="formulario" onsubmit="validarFormulario(event)">
+    <form action="server.php" method="post" id="formulario" onsubmit="validarFormulario(event)">
         <fieldset>
             <legend><strong>Tus datos básicos</strong></legend>
-
+    
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" required placeholder="Introduce tu nombre">
-            
+    
             <label for="apellidos">Apellidos</label>
             <input type="text" name="apellidos" id="apellidos" required placeholder="Introduce tus apellidos">
             <br>
@@ -81,7 +82,7 @@
             <br>
             <label for="password">Contraseña</label>
             <input type="password" name="password" id="password" required minlength="6" maxlength="20"><br>
-
+    
             <label for="fecha_nac">Fecha de nacimiento</label>
             <input type="date" name="fecha_nac" id="fecha_nac"><br>
         </fieldset>
@@ -114,25 +115,26 @@
                 <option>Viernes</option>
                 <option selected>----</option>
             </select>
-
+    
             <label for="inicio_disponibilidad">de</label>
             <input type="time" name="inicio_disponibilidad" id="inicio_disponibilidad">
-
+    
             <label for="fin_disponibilidad">a</label>
             <input type="time" name="fin_disponibilidad" id="fin_disponibilidad"><br><br>
        
             <textarea name="textarea" rows="10" cols="50" placeholder="¿Algo que te gustaría compartir con nosotrxs?"></textarea><br><br>
         </fieldset>
-
+    
         <input type="checkbox" name="condiciones" id="condiciones">
         <label for="condiciones">Quiero recibir información de nuevas sesiones</label><br><br>
-
-        <button type="submit">ENVIAR</button>
+    
+        <button class="boton" type="submit">ENVIAR</button>
     </form>
+    
 
     <footer>
-        <p>&copy; 2024 Erkuden Camiruaga | Todos los derechos reservados</p>  
-        <p><a href="formulario.html">Coger cita</a> | <a href="privacy.html">Política de Privacidad</a></p>
+        <p class="pie">&copy; 2024 Erkuden Camiruaga | Todos los derechos reservados</p>
+        <p class="pie"><a href="formulario.html">Coger cita</a> | <a href="privacy.html">Política de Privacidad</a></p>
     </footer>
 </body>
 </html>

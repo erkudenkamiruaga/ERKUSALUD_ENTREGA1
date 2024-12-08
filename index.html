@@ -10,7 +10,7 @@
 <body class="index">
     <header>
         
-        <h1 style="color: #f39c12; font-family: 'Merriweather', sans-serif;">ERKU SALUD</h1>
+        <h1 class="ERKUSALUD">ERKU SALUD</h1>
     
     <nav>
         <ul class="nav-list">
@@ -69,7 +69,7 @@
                     </ul>
                 </li>
             </ol> <br>
-            <button onclick="location.href='estresyansiedad.html'">
+            <button class="boton" onclick="location.href='estresyansiedad.html'">
                 SABER MÁS SOBRE ESTRÉS
             </button><br><br><br><br>
         </section>
@@ -78,7 +78,7 @@
             <h2>Autodisciplina</h2>
             <img src="img/autodisciplina1.png" alt="Autodisciplina" class="content-img">
             <p>La autodisciplina es fundamental para <em>crecer como personas</em> porque nos permite establecer y <em>alcanzar metas a largo plazo</em>, manteniendo el enfoque y la constancia, incluso cuando surgen dificultades o distracciones. Al practicarla, desarrollamos la capacidad de tomar decisiones conscientes en lugar de actuar por impulsos, lo que fortalece nuestro autocontrol, responsabilidad y resiliencia.</p>
-            <button onclick="location.href='autodisciplina.html'">
+            <button class="boton" onclick="location.href='autodisciplina.html'">
                 SABER MÁS SOBRE AUTODISCIPLINA
             </button> <br><br><br><br>
         </section>
@@ -89,14 +89,20 @@
             <table>
                 <thead>
                     <tr>
+                        <th colspan="2">HÁBITOS Y SUS CONSECUENCIAS</th>
+                    </tr>
+                    <tr>
                         <th>Hábito</th>
                         <th>Consecuencias</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Sedentarismo</strong></td>
-                        <td>Problemas cardiovasculares, obesidad, diabetes tipo 2</td>
+                        <td rowspan="2"><strong>Sedentarismo</strong></td>
+                        <td>Problemas cardiovasculares</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidad, diabetes tipo 2</td>
                     </tr>
                     <tr>
                         <td><strong>Mala alimentación</strong></td>
@@ -107,12 +113,13 @@
                         <td>Enfermedades respiratorias, cáncer, envejecimiento prematuro</td>
                     </tr>
                     <tr>
-                        <td><strong>Uso excesivo de dispositivos electrónicos</strong></td>
-                        <td>Problemas de vista, trastornos del sueño, aislamiento social</td>
+                        <td colspan="2"><strong>Uso excesivo de dispositivos electrónicos:</strong> Problemas de vista, trastornos del sueño, aislamiento social</td>
                     </tr>
                 </tbody>
             </table>
-            <button onclick="location.href='habitosnegativos.html'">
+            
+            
+            <button class="boton" onclick="location.href='habitosnegativos.html'">
                 SABER MÁS SOBRE HÁBITOS NEGATIVOS
             </button> <br><br><br><br>
         </section>
@@ -121,23 +128,24 @@
             <h2>Bienestar Personal</h2>
             <img src="img/bienestarpersonal1.jpg" alt="Bienestar personal" class="content-img">
             <p>El bienestar personal es un concepto integral que incluye el <em>equilibrio entre cuerpo, mente, emociones y relaciones.</em></p>
-            <button onclick="location.href='bienestarpersonal.html'">
+            <button class="boton" onclick="location.href='bienestarpersonal.html'">
                 SABER MÁS SOBRE BIENESTAR PERSONAL
             </button> <br><br><br><br>
         </section>
-
+     
         <aside>
-            <h2>Sesiones a medida para ti</h2>
-            <p>¿Te sientes abrumado por el estrés, la ansiedad o simplemente necesitas mejorar tu bienestar personal? Apuntarte a una de nuestras sesiones puede ser el primer paso hacia una vida más equilibrada y saludable. ¡Invierte en ti mismo y empieza a sentir la diferencia!</p>
-            <button onclick="location.href='formulario.html'">
+            <h2 class="cogercita">Sesiones a medida para ti</h2>
+            <p class="cogercita">¿Te sientes abrumado por el estrés, la ansiedad o simplemente necesitas mejorar tu bienestar personal? Apuntarte a una de nuestras sesiones puede ser el primer paso hacia una vida más equilibrada y saludable. ¡Invierte en ti mismo y empieza a sentir la diferencia!</p>
+            <button class="boton" onclick="location.href='formulario.html'">
                 COGER CITA
             </button> <br><br><br><br>
         </aside>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 Erkuden Camiruaga | Todos los derechos reservados</p>
-        <p><a href="formulario.html">Coger cita</a> | Política de Privacidad</p>
+        <p class="pie">&copy; 2024 Erkuden Camiruaga | Todos los derechos reservados</p>
+        <p class="pie"><a href="formulario.html">Coger cita</a> | <a href="privacy.html">Política de Privacidad</a></p>
     </footer>
 
 </body>
